@@ -1,0 +1,289 @@
+/* -- Global styles -- */
+
+/* -- Colour Palette -- 
+
+Dark red - 931414
+Red - D7202D
+Lighter red - EC9999
+Light red - FDDFDF
+
+Dark green - 1E3C11
+Green - 59803C
+Lighter green - ABCB80
+Light green - DEECC8
+
+Black - 232319
+Dark grey - 8E8E7D
+Light grey - DFDFCD
+White - FFFFFF
+*/
+
+/* -- Font -- 
+font-family: 'Slabo 13px', serif;
+font-family: 'Slabo 27px', serif;
+font-family: 'Roboto', sans-serif;
+*/
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+} 
+
+body {
+    color:#232319;
+    background-color:#FFFFFF;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 31px;
+}
+
+a {
+    color: #D7202D;
+    font-weight:500;
+    text-decoration: none;
+}
+a:active, {
+    color: #931414;
+}
+
+.nav-padding-top {
+    width: 100%;
+    height: 73px;
+}
+
+.nav-padding-bottom {
+    width: 100%;
+    height:131px;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    padding: 0 370px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+nav a {
+    font-family: 'Slabo 27px', 'Rockwell Extra Bold', serif;
+    font-size: 24px;
+    display: inline-block;
+    color: #232319;
+    text-decoration: none;
+    margin-right: 30px;
+}
+
+a:hover, a:active, a:focus {
+    text-decoration: underline;
+}
+
+.grid-layout {
+    display: grid;
+    margin: 0 370px;
+    grid-template-columns: repeat(12,75px);
+    column-gap: 25px;
+    grid-template-rows: auto;
+}
+
+#headshot {
+    grid-column: 1 / span 5;
+    grid-row: 1 / span 3;
+    margin: -79px 43px -79px 0;
+    float: left;
+}
+
+h1 {
+    font-family: 'Slabo 13px', 'Rockwell Extra Bold', serif;
+    font-size: 72px;
+    font-weight: 400;
+    line-height: 89px;
+    color:#FFFFFF;
+    padding: 55px 0 31px 18px;
+    margin: 0;
+    grid-column: 6 / span 6;
+
+}
+
+h2 {
+    font-family: 'Slabo 27px', 'Rockwell Extra Bold', serif;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 1;
+    color: #D7202D;
+    margin: 0;
+    padding-bottom: 33px;
+    display: block;
+    width: 775px;
+    border-bottom: 3px solid #59803C;
+}
+
+header h2 {
+    color: #DFDFCD;
+    padding: 0 0 71px 18px;
+    margin: 0;
+    width: 100%;
+    grid-column: 6 / span 6;
+}
+
+.bckgrd-gap {
+    padding: 55px 0;
+}
+
+h3 {
+    font-family: 'Slabo 27px', serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+.btn {
+    background-color: #D7202D;
+    border: none;
+    color: #FDDFDF;
+    font-size: 24px;
+    font-weight: 500;
+    width: 225px;
+    height: 50px;
+    border-radius: 6px;
+    display:inline-block;
+}
+
+.btn:hover {
+    opacity: 0.7;
+    color: #FFFFFF;
+}
+
+.highlight {
+    background-color:#59803C;
+}
+
+.welcome {
+    background-color: #DEECC8;
+    padding-top: 172px;
+}
+
+.welcome-wrap {
+    width: 741px;
+}
+
+#hello {
+    grid-column: 7 / span 6;
+    grid-row: 1 / span 6;
+    margin: -36px 0 -74px 0;
+    float: right;
+}
+
+#contact-me {
+    grid-column: 1 / span 2;
+    margin: 70px 0 39px 0;
+}
+
+#skills h2 {
+    padding-top: 82px;
+}
+
+.section-unbulleted {
+    margin: 0;
+    list-style: none;
+    padding-left: 0;
+}
+
+.highlight div {
+    padding-top: 64px;
+    margin-top: 46px;
+    padding-bottom: 75px;
+}
+
+.highlight h3 {
+    margin: 0;
+}
+
+#skill-list {
+    text-align: center;
+}
+
+.list-unbulleted {
+    color: #DFDFCD;
+    font-size: 20px;
+    list-style: none;
+}
+
+#download-resume {
+    margin-top: 75px;
+    margin-bottom: 23px; 
+}
+
+.project {
+    background-color: #DFDFCD;
+}
+
+.project-title {
+    font-family: 'Slabo 27px', 'Rockwell Extra Bold', serif;
+    font-size: 24px;
+    display: block;
+    color: #D7202D;
+    text-decoration: none;
+}
+
+.project-description {
+    background-color: #FFFFFF;
+    line-height: 24px;
+}
+
+.project-description p {
+    font-weight: 500;
+}
+
+.project-description li {
+    font-size: 20px;
+}
+
+.project-summary {
+
+}
+
+.project-role {
+
+}
+
+.passions {
+    background-color: #FDDFDF;
+    font-style: normal;
+}
+
+.center-wrap {
+    width: 762px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+footer {
+    background: #232319;
+    padding: 0 0 0 0;
+    margin: 0;
+}
+
+footer p {
+    color: #8E8E7D;
+    font-size: 20px;
+    padding: 36px;
+    margin: 0;
+}
+
+footer .icon {
+    display: inline-flex;
+    justify-content: center;
+    margin: 36px 36px 0 36px;
+}
