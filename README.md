@@ -10,4 +10,4 @@ Simple portfolio website for a web development and digital marketing professiona
 
 ## License
 
-This project is under exclusive copyright.
+This project is under GNU General Public License v3.0.
