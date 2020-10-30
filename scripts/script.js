@@ -9,8 +9,8 @@ const menuLogo = document.querySelector(".main-menu .logo");
 
 //Toggles menu overlay, menu icon type:
 function toggleMobileMenu() {
-    mobileNavIcon.classList.toggle("fa-bars");    
-    mobileNavIcon.classList.toggle("fa-times");
+    mobileNavIcon.classList.toggle("hamburger");    
+    mobileNavIcon.classList.toggle("cross");
     menuItems.classList.toggle("menu-items-active");
 }
 
@@ -31,14 +31,6 @@ menuLogo.addEventListener("click", function() {
 // PROJECTS DROP-DOWN TEXT
 
 //Defining project cards:
-const tdProject = document.getElementById("TD-project");
-const tdDescription = document.getElementById("TD-description");
-const walmartProject = document.getElementById("Walmart-project");
-const walmartDescription = document.getElementById("Walmart-description");
-const klavaProject = document.getElementById("Klava-project");
-const klavaDescription = document.getElementById("Klava-description");
-const danaProject = document.getElementById("Dana-project");
-const danaDescription = document.getElementById("Dana-description");
 const allProjects = document.querySelectorAll(".project");
 const allDescriptions = document.querySelectorAll(".project-description")
 
@@ -64,7 +56,15 @@ function activateProject(project, description) {
 }
 
 //Event listeners for projects:
-tdProject.addEventListener("click", function() { activateProject(tdProject, tdDescription); }, false);
-walmartProject.addEventListener("click", function() { activateProject(walmartProject, walmartDescription); }, false);
-klavaProject.addEventListener("click", function() { activateProject(klavaProject, klavaDescription); }, false);
-danaProject.addEventListener("click", function() { activateProject(danaProject, danaDescription); }, false);
+document.addEventListener("DOMContentLoaded", function() {
+
+    allProjects.forEach( function(project) {
+
+        let projectName = project.id.split("-")[0];
+
+        project.addEventListener("click", function() { 
+            activateProject(project, document.getElementById(projectName + "-description")); 
+        }, false);
+    });
+
+}, false);

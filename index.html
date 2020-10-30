@@ -52,24 +52,21 @@
     <nav>
       <div class="main-menu">
         <a class="icon logo" href="#">
-          <img 
-            src="images/dt-logo-50.png" 
-            alt="Daria Tsvetkova's logo, black lower case letters d and t"
-            srcset="images/dt-logo-100.png 2x"
+          <img src="images/dt-logo.svg" alt="Daria Tsvetkova's logo, black lower case letters d and t"
           >
         </a>
-        <div class="mobile-nav-icon" id="navigation-main" aria-label="Skip to main navigation">
-          <span class="fa fa-bars fa-lg"></span>
-        </div>
+        <button class="mobile-nav-icon" id="navigation-main" aria-label="Skip to main navigation">
+          <span class="hamburger"></span>
+        </button>
         <div class="menu-items">
           <div>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
             <a href="#passions">Passions</a>
-            <a class="icon" href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x64;&#x2e;&#x73;&#x2e;&#x74;&#x73;&#x76;&#x65;&#x74;&#x6b;&#x6f;&#x76;&#x61;&#x40;&#x68;&#x6f;&#x74;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;" 
+            <a class="icon" href="https://github.com/dariatsvetkova?tab=repositories&q=&type=source&language=" 
               target="_blank">
-              <span class="screen-reader-text">Email</span>
-              <span class="fa fa-envelope"></span>
+              <span class="screen-reader-text">GitHub</span>
+              <span class="fa fa-github"></span>
             </a>
             <a class="icon" href="https://www.linkedin.com/in/daria-tsvetkova-05560763/" target="_blank">
               <span class="screen-reader-text">LinkedIn</span>
@@ -80,8 +77,8 @@
               <span class="fa fa-twitter"></span>
             </a>
           </div>
-        </div>
-      </div>
+        </div><!-- .menu-items -->
+      </div><!-- .main-menu -->
     </nav>
     <div class="nav-padding-bottom"></div>
 
@@ -96,13 +93,13 @@
         >
         <h1>Daria Tsvetkova</h1>
         <h2>web&nbspdeveloper and digital marketer in&nbspToronto, Canada</h2>
-      </div>
+      </div><!-- .content-wrap -->
     </header>
 
     <main>
       <section id="welcome">
         <div class="content-wrap">
-          <picture>
+          <picture title = "Photo: Jon Tyson via Unsplash">
             <source srcset="images/jon-tyson-UAiuTwvksFs-unsplash-wide.jpg, 
                             images/jon-tyson-UAiuTwvksFs-unsplash-wide-2x.jpg 2x"
               media="(max-width: 555px)">
@@ -121,16 +118,15 @@
             <p>I am fascinated by the range of&nbsppossibilities in&nbspweb development, where you can create things literally out of&nbspones and zeroes. And for comprehensive brand-building, I&nbsppair my&nbspprogramming skills with extensive digital marketing expertise.</p>
             <p>Check out my&nbsp<a href="#projects">projects</a> below. If&nbspyou are interested in&nbspworking with me, don't hesitate to&nbspdrop me&nbspa&nbspline!</p>
           </div>  
-          <div class="btn">
-            <a href="mailto:d.s.tsvetkova@hotmail.com"><button>Contact me</button></a>
-          </div>  
-        </div>
-        </section>
+          <a class="btn" href="mailto:d.s.tsvetkova@hotmail.com">Contact me</a>
+        </div><!-- .content-wrap -->
+        </section><!-- #welcome -->
   
       <section id="skills">
         <div class="content-wrap">
           <h2>Skills</h2>
           <ul>
+
             <li class="skill">
               <h3>Web Development</h3>
               <span class="fa fa-wrench fa-2x fa-fw" aria-hidden="true"></span>
@@ -140,6 +136,7 @@
                 <li>Stellar project management to seamlessly meet deadlines</li>
               </ul>
             </li>
+
             <li class="skill">
               <h3>Digital Marketing</h3>
               <span class="fa fa-users fa-2x fa-fw" aria-hidden="true"></span>
@@ -150,6 +147,7 @@
                 <li>Email marketing</li>
               </ul>
             </li>
+
             <li class="skill">
               <h3>Social Media Management</h3>
               <span class="fa fa-heart fa-2x fa-fw" aria-hidden="true"></span>
@@ -161,18 +159,72 @@
               </ul>
             </li>
           </ul>
-          <!-- <div class="btn">
-            <a href="files/daria-tsvetkova.pdf"><button>Download resume</button></a>
-          </div>   -->
-        </div>
-      </section>
+        </div><!-- .content-wrap -->
+      </section><!-- #skills -->
 
       <section id="projects">
         <div class="content-wrap">
           <h2>Projects</h2>
           <ul class="project-wrap">
+
+            <li id="Game15">
+              <button data-target="#Game15" class="project" id="Game15-project">
+                <img 
+                  src="images/Game15.png"
+                  alt="screenshot of a website with the 15 Puzzle"
+                  srcset="images/Game15-158.png 600w,
+                          images/Game15-202.png 1200w,
+                          images/Game15-404.png 2400w"
+                >
+                <h3 class="project-h3">Game of Fifteen (2020)</h3>
+              </button>
+            </li>
+            <div class="project-description" id="Game15-description">
+              <div>
+                <p>Project:</p>
+                <ul>
+                  <li>Online version of the classic 15 Puzzle. Written with plain JavaScript and SCSS. Features include responsive design, two colour themes, storing state of the game in local storage.</li>
+                </ul>
+              </div>
+              <div> 
+                <p>My role:</p>
+                <ul>
+                  <li>Designed and programmed the project from scratch.</li>
+                </ul>
+                <p><a href = "https://gameof15.com/" target = "_blank">Project</a> | <a href = "https://github.com/dariatsvetkova/gameof15" target = "_blank">Repo</a></p>
+              </div>  
+            </div><!-- .project-description -->
+
+            <li id="Taptempo">
+              <button data-target="#Taptempo" class="project" id="Taptempo-project">
+                <img 
+                  src="images/Taptempo.png"
+                  alt="screenshot of a music-themed website"
+                  srcset="images/Taptempo-215.png 600w,
+                          images/Taptempo-275.png 1200w,
+                          images/Taptempo-550.png 2400w"
+                >
+                <h3 class="project-h3">Tap Tempo (2020)</h3>
+              </button>
+            </li>
+            <div class="project-description" id="Taptempo-description">
+              <div>
+                <p>Project:</p>
+                <ul>
+                  <li>Online beats-per-minute calculator for music professionals. Written with JavaScript and jQuery. Responsive design.</li>
+                </ul>
+              </div>
+              <div>  
+                <p>My role:</p>
+                <ul>
+                  <li>Designed and programmed the website from scratch, created illustrations, deployed SEO.</li>
+                </ul>
+                <p><a href = "https://www.taptempo.net/" target = "_blank">Project</a> | <a href = "https://github.com/dariatsvetkova/TapTempo" target = "_blank">Repo</a></p>
+              </div>  
+            </div><!-- .project-description -->
+
             <li id="TD">
-              <a href="#TD" class="project" id="TD-project">
+              <button data-target="#TD" class="project" id="TD-project">
                 <img 
                   src="images/td.png"
                   alt="a digital banner with a picture of an young Indian family and advertising for a mortgage"
@@ -181,7 +233,7 @@
                           images/TD-404.png 2400w"
                 >
                 <h3 class="project-h3">TD Bank Mortgage Campaign (2019)</h3>
-              </a>
+              </button>
             </li>
             <div class="project-description" id="TD-description">
               <div>
@@ -201,9 +253,10 @@
                 <li>Analyzed post-campaign results and developed recommendations that have been successfully implemented in the next campaign.</li>
                 </ul>
               </div>  
-            </div>
+            </div><!-- .project-description -->
+
             <li id="Walmart">
-              <a href="#Walmart" class="project" id="Walmart-project">
+              <button data-target="#Walmart" class="project" id="Walmart-project">
                 <img 
                   alt="a digital banner in Chinese with three pigs on red background"
                   src="images/walmart.png"
@@ -212,7 +265,7 @@
                           images/Walmart-550.png 2400w"
                 >
                 <h3 class="project-h3">Walmart Chinese New Year Campaign (2019)</h3>
-              </a>
+              </button>
             </li>  
             <div class="project-description" id="Walmart-description">
               <div>
@@ -232,9 +285,10 @@
                   <li>Developed recommendations to the client which they implemented in the next campaign.</li>
                 </ul>
               </div>  
-            </div>
+            </div><!-- .project-description -->
+
             <li id="Klava">
-              <a href="#Klava" class="project" id="Klava-project">
+              <button data-target="#Klava" class="project" id="Klava-project">
                 <img 
                   alt="screenshot of a YouTube channel titled Klava Koka, with music videos and vlogs"  
                   src="images/klava.png"
@@ -243,7 +297,7 @@
                           images/Klava-550.png 2400w"                   
                 >
                 <h3 class="project-h3">Marketing a YouTube Influencer (2017)</h3>
-              </a>
+              </button>
             </li>
             <div class="project-description" id="Klava-description">
               <div>
@@ -266,9 +320,10 @@
                   <li>Worked with the artist to ensure the required content is produced on time and is of high quality; Ensured regular meetings between the team, the artist, videographers and consultants.</li>
                 </ul>
               </div>
-            </div>  
+            </div><!-- .project-description -->
+
             <li id="Dana">
-              <a href="#Dana" class="project" id="Dana-project">
+              <button data-target="#Dana" class="project" id="Dana-project">
                 <img 
                   alt="screenshot of a rock band's profile on Instagram, photos of a woman with a shaved head and musicians"
                   src="images/dana.png"
@@ -277,7 +332,7 @@
                   images/Dana-404.png 2400w"
                 >
                 <h3 class="project-h3">Marketing a Rock Artist (2017-2018)</h3>
-              </a>
+              </button>
             </li>    
             <div class="project-description" id="Dana-description">
               <div>
@@ -298,10 +353,10 @@
                 <li>Communicated with the artist and the band. Oversaw artist’s day-to-day activities; interviews, photo shoots, fittings, rehearsals, etc.</li>
                 </ul>
               </div>
-            </div>
+            </div><!-- .project-description -->
           </ul>
-        </div>
-      </section>
+        </div><!-- .content-wrap -->
+      </section><!-- #projects -->
 
       <section id="passions">
         <div class="content-wrap">
@@ -339,25 +394,21 @@
             </li>
           </ul>
         </div>
-      </section>
-    </main>      
+      </section><!-- #passions -->
+    </main>
       
     <footer>
       <div class="content-wrap">
         <p>
           <a class="icon logo" href="#">
-            <img 
-              src="images/dt-logo-50-white.png" 
-              alt="Daria Tsvetkova's logo, white lower case letters d and t"
-              srcset="images/dt-logo-100-white.png 2x"
-            >
+            <img src="images/dt-logo-white.svg" alt="Daria Tsvetkova's logo, white lower case letters d and t">
           </a>
         </p>
         <p>
-          <a class="icon" href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x64;&#x2e;&#x73;&#x2e;&#x74;&#x73;&#x76;&#x65;&#x74;&#x6b;&#x6f;&#x76;&#x61;&#x40;&#x68;&#x6f;&#x74;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;" 
+          <a class="icon" href="https://github.com/dariatsvetkova?tab=repositories&q=&type=source&language=" 
             target="_blank">
-            <span class="screen-reader-text">Email</span>
-            <span class="fa fa-envelope"></span>
+            <span class="screen-reader-text">GitHub</span>
+            <span class="fa fa-github"></span>
           </a>
           <a class="icon" href="https://www.linkedin.com/in/daria-tsvetkova-05560763/" target="_blank">
             <span class="screen-reader-text">LinkedIn</span>

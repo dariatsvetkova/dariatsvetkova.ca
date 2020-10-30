@@ -61,6 +61,9 @@ h2 {
     color: #D7202D;
     max-width: 32.3em;
     padding: 1em 0;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
     border-bottom: 3px solid #59803C;
 }
 
@@ -73,6 +76,8 @@ h3 {
 .project-h3 {
     font-size: 1em;
     line-height: 1.21em;
+    display: block;
+    width: 13.4em;
 }
 
 b, strong {
@@ -134,7 +139,23 @@ p a {
     transition: border-bottom-color 0.3s; 
 }
 
-a .project-h3, .project-h3 a, nav a {
+button {
+    border: none;
+    border-radius: none;
+    background-image: none;
+    box-shadow: none;
+    background: none;
+    font-size: 1em;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+button:active {
+    transition: none;
+}
+
+button .project-h3, .project-h3 a, nav a {
     font-family: 'Slabo 27px', 'Roboto Slab', serif;
     font-style: normal;
     font-weight: normal;
@@ -146,7 +167,7 @@ a .project-h3, .project-h3 a, nav a {
     transition: border-bottom-color 0.3s; 
 }
 
-a .project-h3, .project-h3 a {
+button .project-h3, .project-h3 a {
     color: #D7202D;
 }
 
@@ -181,11 +202,13 @@ nav a:visited {
     border-bottom: none;
 }
 
-button {
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 9.4em;
     height: 2em;
     background-color: #D7202D;
-    border: none;
     border-radius: 6px;
     color: #FDDFDF;
     font-size: 1em;
@@ -196,16 +219,15 @@ button {
     box-shadow: 1px 1px 2px 1px rgba(35, 35, 25, 0.3);
 }
 
-button:hover, button:focus {
+.btn:hover, .btn:focus {
     background-color: #EC9999;
     color: #FFFFFF;
-    cursor: pointer;
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s;
 }
 
-button:active {
+.btn:active {
     -webkit-box-shadow: inset 1px 1px 2px 1px rgba(35, 35, 25, 0.1);
     box-shadow: inset 1px 1px 2px 1px rgba(35, 35, 25, 0.1);
     -webkit-transition: -webkit-box-shadow 0.2s;
@@ -252,6 +274,16 @@ img {
     display: none;
 }
 
+#navigation-main {
+    background: none;
+    width: 58px;
+    height: 100%;
+    border: none;
+    box-shadow: none;
+    color: none;
+    border-radius: none;
+}
+
 nav {
     background-color: #FFFFFF;
     position: sticky;
@@ -279,6 +311,7 @@ nav a {
 
 nav .logo {
     margin: 0.3em 0 0 0;
+    width: 50px;
 }
 
 nav .fa {
@@ -312,6 +345,7 @@ header h2 {
     color: #DFDFCD;
     border-bottom: none;
     max-width: none;
+    text-align: left;
     padding: 2rem 1.83rem 3rem 1.83rem;
     margin: 0;
 }
@@ -324,6 +358,10 @@ header h2 {
     padding-top: 3.3em;
 }
 
+#welcome h2 {
+    text-align: left;
+}
+
 #welcome p:last-of-type, #welcome .btn {
     margin-bottom: 3em;
 }
@@ -333,17 +371,10 @@ header h2 {
     margin: -1.3em 0 -3.3em 0;
 }
 
-
 /* --- Skills DEFAULT STYLES --- */
 
 #skills {
     padding-top: 2em;
-}
-
-#skills h2 {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
 }
 
 #skills h2 + ul {
@@ -397,11 +428,6 @@ header h2 {
 
 .skill li:last-of-type {
     padding-bottom: 2em;
-}
-
-#skills .btn {
-    margin: 2.3rem auto;
-    text-align: center;
 }
 
 
@@ -466,7 +492,6 @@ header h2 {
     transition: color 0.2s 0.3s;
     margin: 1.3em;
     padding: 0;
-    width: auto;
 }
 
 .project:hover .project-h3, .project:focus .project-h3 {
@@ -497,6 +522,7 @@ header h2 {
 }
 
 .project-description {
+    visibility: hidden;
     display: block;
     font-size: 0;
     line-height: 0;
@@ -507,6 +533,7 @@ header h2 {
 }
 
 .project-description-active {
+    visibility: visible;
     font-size: 1em;
     line-height: 129%;
     opacity: 1;
@@ -548,7 +575,7 @@ header h2 {
     padding-bottom: 2em;
 }
 
-#passions h2, #passions article {
+#passions article {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -604,6 +631,11 @@ footer .icon {
     margin: 0 0.63em;
 }
 
+footer .logo {
+    display: inline-block;
+    width: 50px;
+}
+
 footer p {
     margin-top: 0;
 }
@@ -617,7 +649,7 @@ footer .fa {
 
 @supports (grid-area: auto) {
 
-    /* -- Removes default styles -- */
+    /* -- Resets default styles -- */
 
     h1, h2, h3, h4, h5, h6 {
         clear: both;
@@ -648,7 +680,7 @@ footer .fa {
 
     .nav-padding-top {
         width: 100%;
-        height: 2.6em;
+        height: 62px;
     }
 
     .nav-padding-bottom {
@@ -731,8 +763,6 @@ footer .fa {
     /* -- Skills desktop layout -- */
 
     #skills h2 {
-        margin-left: 0;
-        margin-right: 0;
         grid-column: 4 / span 8;
         grid-row: 1/2;
     }
@@ -742,14 +772,10 @@ footer .fa {
         grid-row: 2/3;
     }
 
-    #skills .btn {
-        grid-column: 6 / span 4;
-    }
-
     /* -- Projects desktop layout -- */
     
     #projects h2 {
-        grid-column: 2 / span 8;
+        grid-column: 4 / span 8;
         grid-row: 1/2;
     }
 
@@ -780,35 +806,45 @@ footer .fa {
         grid-column: 1/3;
     }
 
-    #TD, #Walmart {
-        grid-row: 1/2
+    #Game15, #Taptempo {
+        grid-row: 1/2;
     }
 
-    #TD-description {
+    #Game15-description {
         grid-row: 2/3;
     }
 
-    #Walmart-description {
+    #Taptempo-description {
         grid-row: 3/4;
     }
 
-    #Klava, #Dana {
+    #TD, #Walmart {
         grid-row: 4/5;
     }
 
-    #Klava-description {
+    #TD-description {
         grid-row: 5/6;
     }
 
-    #Dana-description {
+    #Walmart-description {
         grid-row: 6/7;
+    }
+
+    #Klava, #Dana {
+        grid-row: 7/8;
+    }
+
+    #Klava-description {
+        grid-row: 8/9;
+    }
+
+    #Dana-description {
+        grid-row: 9/10;
     }
 
     /* Passions desktop layout -- */
 
     #passions h2 {
-        margin-left: 0;
-        margin-right: 0;
         grid-column: 4 / span 8;
         grid-row: 1/2;
     }
@@ -831,50 +867,51 @@ footer .fa {
         align-items: stretch;
     }
 
-    .passion > a:first-of-type, .overlay {
-        grid-column: 1/2;
-        grid-row: 1/2;
-    }
+    @media (hover:hover) and (pointer:fine) {
+        .passion > a:first-of-type, .overlay {
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
 
-    .overlay {
-        background-color: rgba(223, 223, 205, 0.75);
-        padding: 1em;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        opacity: 0;
-        -webkit-transition: opacity 0.3s;
-        -o-transition: opacity 0.3s;
-        transition: opacity 0.3s;
-        -webkit-transform: translateZ(0);
-        -moz-transform: translateZ(0);
-        -o-transform: translateZ(0);
-        transform: translateZ(0);        
-    }
-
-    .overlay:hover, .overlay:focus {
-        opacity: 1;
-        -webkit-transition: opacity 0.3s;
-        -o-transition: opacity 0.3s;
-        transition: opacity 0.3s;
-    }
-
-    .passion figcaption {
-        grid-column: 1/2;
-        grid-row: 2/3;
+        .overlay {
+            background-color: rgba(223, 223, 205, 0.75);
+            padding: 1em;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            opacity: 0;
+            -webkit-transition: opacity 0.3s;
+            -o-transition: opacity 0.3s;
+            transition: opacity 0.3s;
+            -webkit-transform: translateZ(0);
+            -moz-transform: translateZ(0);
+            -o-transform: translateZ(0);
+            transform: translateZ(0);        
+        }
+    
+        .overlay:hover, .overlay:focus {
+            opacity: 1;
+            -webkit-transition: opacity 0.3s;
+            -o-transition: opacity 0.3s;
+            transition: opacity 0.3s;
+        }
+    
+        .passion figcaption {
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }    
     }
 
     /* -- Footer desktop layout -- */
 
     footer p, footer small {
         grid-column: 4 / span 8;
-
     }
 
 
@@ -909,7 +946,7 @@ footer .fa {
             line-height: 28px;
         }
 
-        button {
+        .btn {
             height: 2.5em;
         }
 
@@ -944,27 +981,68 @@ footer .fa {
             grid-column: 5/6;
             grid-row: 1/2;
             display: inline-block;
+            padding: 25px 15px;
             justify-self: flex-end;
             cursor: pointer;
+            z-index: 6;
         }
 
-        .mobile-nav-icon span {
-            padding: 15px;
+        .hamburger, .hamburger::before, .hamburger::after {
+            display: block;
+            width: 28px;
+            height: 4px;
+            background-color: #232319;
+            transition: all 0.3s ease-in-out;
         }
+
+        .hamburger::before, .hamburger::after {
+            content: '';
+        }
+
+        .hamburger::before {
+            transform: translateY(-10px);
+        }
+
+        .hamburger::after {
+            transform: translateY(6px);
+        }
+
+        .cross, .cross::before {
+            display: block;
+            width: 28px;
+            height: 4px;
+            background-color: #232319;
+            transform: rotate(45deg);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .cross::before, .cross::after {
+            content: '';
+        }
+
+        .cross::before {
+            transform: rotate(90deg);
+        }
+
+        .cross::after {
+            width: 0px;
+            height: 0px;
+        }
+
 
         .menu-items {
-            display: none;
-        }
-
-        .menu-items-active {
             display: block;
-            height: 100%;
-        }
-
-        .menu-items-active div {
+            visibility: hidden;
             position: fixed;
             top: 54px;
-            left: 0;
+            right: 0;
+            height: 100vh;
+            overflow: hidden;
+            transform: translateX(100%);
+            transition: all 0.3s 0.2s ease-in-out;
+        }
+
+        .menu-items div {
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
@@ -984,28 +1062,48 @@ footer .fa {
             font-size: 27px;
         }
 
-        .menu-items-active a, .menu-items-active a:first-of-type {
+        .menu-items div a {
+            flex-shrink: 0;
+            opacity: 0;
+            transition: opacity 0.2s ease-in;
+        }
+
+        .menu-items a, .menu-items a:first-of-type {
             padding: 10px;
             margin: 0.5em;
             border-bottom: none;
         }
 
+        .menu-items-active {
+            visibility: visible;
+            transform: translateX(0);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .menu-items-active div a {
+            opacity: 1;
+            transition: opacity 0.2s 0.3s ease-in;
+        }
+
+        
         /* -- Header mobile layout -- */
 
         header img {
-            margin: -7.2em 0 0 0;
-            grid-column: 2/5;
+            margin: -7.2em auto 0 auto;
+            grid-column: 2/6;
             grid-row: 1/2;
             min-width: 250px;
         }
 
         h1 {
+            text-align: center;
             grid-column: 2/6;
             grid-row: 2/3;
             padding: 0.5em 0; 
         }
 
         header h2 {
+            text-align: center;
             grid-column: 2/6;
             grid-row: 3/4;
             padding: 0 0 1em 0;
@@ -1100,41 +1198,57 @@ footer .fa {
                 grid-template-columns: 1fr;
             }
 
-            .project-wrap > li:nth-of-type(-n+4), .project-wrap > div {
+            .project-wrap > li:nth-of-type(-n+6), .project-wrap > div {
                 grid-column: 1/2;
                 justify-self: center;
             }
 
-            #TD {
+            #Game15 {
                 grid-row: 1/2
             }
         
-            #TD-description {
+            #Game15-description {
                 grid-row: 2/3;
             }
         
-            #Walmart {
+            #Taptempo {
                 grid-row: 3/4;
             }
 
-            #Walmart-description {
+            #Taptempo-description {
                 grid-row: 4/5;
             }
         
-            #Klava {
+            #TD {
                 grid-row: 5/6;
             }
         
-            #Klava-description {
+            #TD-description {
                 grid-row: 6/7;
             }
 
-            #Dana {
+            #Walmart {
                 grid-row: 7/8;
             }
 
-            #Dana-description {
+            #Walmart-description {
                 grid-row: 8/9;
+            }
+
+            #Klava {
+                grid-row: 9/10;
+            }
+
+            #Klava-description {
+                grid-row: 10/11;
+            }
+
+            #Dana {
+                grid-row: 11/12;
+            }
+
+            #Dana-description {
+                grid-row: 12/13;
             }
 
         }
