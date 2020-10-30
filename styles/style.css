@@ -143,7 +143,8 @@ button {
     border: none;
     border-radius: none;
     background-image: none;
-    box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
     background: none;
     font-size: 1em;
     text-decoration: none;
@@ -152,6 +153,8 @@ button {
 }
 
 button:active {
+    -webkit-transition: none;
+    -o-transition: none;
     transition: none;
 }
 
@@ -203,9 +206,15 @@ nav a:visited {
 }
 
 .btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 9.4em;
     height: 2em;
     background-color: #D7202D;
@@ -232,6 +241,7 @@ nav a:visited {
     box-shadow: inset 1px 1px 2px 1px rgba(35, 35, 25, 0.1);
     -webkit-transition: -webkit-box-shadow 0.2s;
     -o-transition: box-shadow 0.2s;
+    transition: -webkit-box-shadow 0.2s;
     transition: box-shadow 0.2s;
     transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
 }
@@ -279,13 +289,15 @@ img {
     width: 58px;
     height: 100%;
     border: none;
-    box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
     color: none;
     border-radius: none;
 }
 
 nav {
     background-color: #FFFFFF;
+    position: -webkit-sticky;
     position: sticky;
     top: -1px;
     z-index: 5;
@@ -789,7 +801,9 @@ footer .fa {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-column-gap: 1em;   
-        align-items: center; 
+        -webkit-box-align: center;   
+            -ms-flex-align: center;   
+                align-items: center; 
     }
 
     .project {
@@ -867,8 +881,12 @@ footer .fa {
         display: grid;
         grid-template-columns: 375px;
         grid-template-rows: 375px auto;
-        justify-content: center;
-        align-items: stretch;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: stretch;
+            -ms-flex-align: stretch;
+                align-items: stretch;
     }
 
     @media (hover:hover) and (pointer:fine) {
@@ -894,8 +912,6 @@ footer .fa {
             -o-transition: opacity 0.3s;
             transition: opacity 0.3s;
             -webkit-transform: translateZ(0);
-            -moz-transform: translateZ(0);
-            -o-transform: translateZ(0);
             transform: translateZ(0);        
         }
     
@@ -973,7 +989,9 @@ footer .fa {
             max-width: 800px;
             grid-template-columns: 0.5em repeat(4, 1fr) 0.5em;
             grid-column-gap: 0.5em;
-            align-items: centre;
+            -webkit-box-align: centre;
+                -ms-flex-align: centre;
+                    align-items: centre;
         }
 
         .main-menu .logo {
@@ -996,6 +1014,8 @@ footer .fa {
             width: 28px;
             height: 4px;
             background-color: #232319;
+            -webkit-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
             transition: all 0.3s ease-in-out;
         }
 
@@ -1004,11 +1024,15 @@ footer .fa {
         }
 
         .hamburger::before {
-            transform: translateY(-10px);
+            -webkit-transform: translateY(-10px);
+                -ms-transform: translateY(-10px);
+                    transform: translateY(-10px);
         }
 
         .hamburger::after {
-            transform: translateY(6px);
+            -webkit-transform: translateY(6px);
+                -ms-transform: translateY(6px);
+                    transform: translateY(6px);
         }
 
         .cross, .cross::before {
@@ -1016,7 +1040,11 @@ footer .fa {
             width: 28px;
             height: 4px;
             background-color: #232319;
-            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                    transform: rotate(45deg);
+            -webkit-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
             transition: all 0.3s ease-in-out;
         }
 
@@ -1025,7 +1053,9 @@ footer .fa {
         }
 
         .cross::before {
-            transform: rotate(90deg);
+            -webkit-transform: rotate(90deg);
+                -ms-transform: rotate(90deg);
+                    transform: rotate(90deg);
         }
 
         .cross::after {
@@ -1042,7 +1072,11 @@ footer .fa {
             right: 0;
             height: 100vh;
             overflow: hidden;
-            transform: translateX(100%);
+            -webkit-transform: translateX(100%);
+                -ms-transform: translateX(100%);
+                    transform: translateX(100%);
+            -webkit-transition: all 0.3s 0.2s ease-in-out;
+            -o-transition: all 0.3s 0.2s ease-in-out;
             transition: all 0.3s 0.2s ease-in-out;
         }
 
@@ -1067,8 +1101,11 @@ footer .fa {
         }
 
         .menu-items div a {
-            flex-shrink: 0;
+            -ms-flex-negative: 0;
+                flex-shrink: 0;
             opacity: 0;
+            -webkit-transition: opacity 0.2s ease-in;
+            -o-transition: opacity 0.2s ease-in;
             transition: opacity 0.2s ease-in;
         }
 
@@ -1080,12 +1117,18 @@ footer .fa {
 
         .menu-items-active {
             visibility: visible;
-            transform: translateX(0);
+            -webkit-transform: translateX(0);
+                -ms-transform: translateX(0);
+                    transform: translateX(0);
+            -webkit-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
             transition: all 0.3s ease-in-out;
         }
 
         .menu-items-active div a {
             opacity: 1;
+            -webkit-transition: opacity 0.2s 0.3s ease-in;
+            -o-transition: opacity 0.2s 0.3s ease-in;
             transition: opacity 0.2s 0.3s ease-in;
         }
 
@@ -1287,7 +1330,9 @@ footer .fa {
             grid-template-rows: auto;
             grid-column-gap: 0.5em;
             grid-row-gap: 0.5em;
-            justify-content: left;
+            -webkit-box-pack: left;
+                -ms-flex-pack: left;
+                    justify-content: left;
         }
 
         .passion > a:first-of-type {
