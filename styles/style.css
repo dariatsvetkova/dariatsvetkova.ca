@@ -287,7 +287,7 @@ img {
 nav {
     background-color: #FFFFFF;
     position: sticky;
-    top: 0;
+    top: -1px;
     z-index: 5;
 }
 
@@ -616,6 +616,10 @@ header h2 {
     color: #232319;
     -webkit-text-decoration: underline 1px;
     text-decoration: underline 1px;
+}
+
+#passions .project-h3 {
+    width: auto;
 }
 
 /* --- Footer DEFAULT STYLES --- */
