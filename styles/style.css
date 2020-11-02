@@ -2,7 +2,7 @@
 
 Dark red - 931414   Red - D7202D    Lighter red - EC9999    Light red - FDDFDF
 Dark green - 1E3C11     Green - 59803C  Lighter green - ABCB80  Light green - DEECC8
-Black - 232319  Dark grey - 8E8E7D  Light grey - DFDFCD White - FFFFFF
+Black - 232319  Dark grey - 8E8E7D  Light grey - DEDED3 White - FFFFFF
 */
 
 /* -- Typography --
@@ -354,7 +354,7 @@ h1 {
 } 
 
 header h2 {
-    color: #DFDFCD;
+    color: #DEDED3;
     border-bottom: none;
     max-width: none;
     text-align: left;
@@ -424,13 +424,13 @@ header h2 {
 }
 
 .skill .fa {
-    color: #DFDFCD;
+    color: #DEDED3;
 }
 
 .skill li {
     display: block;
     padding: 0 1em 1.3em 1em;
-    color: #DFDFCD;
+    color: #DEDED3;
     font-size: 0.83em;
 }
 
@@ -556,7 +556,6 @@ header h2 {
 
 .project-description div {
     display: inline-block;
-    margin: 1em;
 }
 
 .project-description div:first-of-type {
@@ -569,7 +568,7 @@ header h2 {
     min-width: 300px;
 }
 
-.project-description-active p {
+.project-description-active p, .project-description-active b {
     font-weight: 500;
 }
 
@@ -577,7 +576,6 @@ header h2 {
     padding-bottom:1em;
     font-size: 0.83em;
 }
-
 
 /* --- Passions DEFAULT STYLES --- */
 
@@ -657,7 +655,7 @@ footer p {
 }
 
 footer .fa {
-    color: #DFDFCD;
+    color: #DEDED3;
 }
 
 
